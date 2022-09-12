@@ -1,12 +1,14 @@
 /* **************Desafio 1
 //Crie uma função que irá receber uma quatidade indeterminada de número. É tire a média desses valores:
 
+1° Conclusão 
 function media(...values) {
   let sum = 0
   values.forEach(a => (sum += a))
   return sum / values.length
 }
 
+2° Conclusão: curso 
 function media(...values) {
   let sum = values.reduce((acc, value) => (acc += value), 0)
   return sum / values.length
@@ -35,7 +37,7 @@ function print(value) {
   }
 }
 
-2° Conclusão + aprimorado
+2° Conclusão + aprimorado: curso
 
 function print(value) { 
   if (value === 0) {
@@ -48,4 +50,33 @@ function print(value) {
     return 'chunk-' + print(value - 1)
   }
 }
+
+
+//Inverter arrays, sem usar funções especificas do JS, utilizar estrutura de repetição básicas..
+
+1° Conclusão
+function inverter(...array) {
+  let newArray = []
+
+  for (let i = array.length - 1; i >= 0; i--) {
+    newArray.push(array[i])
+  }
+  console.log(newArray)
+}
+
+2° Conclusão : curso
+function inverter(arr) {
+  let newARray = []
+
+  for (let i = 0; i < arr.length; i++) {
+    newARray[i] = arr[arr.length - 1 - i]
+  }
+  // 0 = arr[4 - 1 - 0] = 3
+  // 1 = arr[4 - 1 - 1] = 2
+  // 2 = arr[4 - 1 - 2] = 1
+  // 3 = arr[4 - 1 - 3] = 0
+  return newARray
+}
+
+console.log(inverter([5, 8, 7, 3]))
 */
