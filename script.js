@@ -1,14 +1,16 @@
-/* **************Desafio 1
+/*
+// ************** Desafio 1**********************
 //Crie uma função que irá receber uma quatidade indeterminada de número. É tire a média desses valores:
 
-1° Conclusão 
+1° Opção
+
 function media(...values) {
   let sum = 0
   values.forEach(a => (sum += a))
   return sum / values.length
 }
 
-2° Conclusão: curso 
+2° Opção
 function media(...values) {
   let sum = values.reduce((acc, value) => (acc += value), 0)
   return sum / values.length
@@ -17,13 +19,11 @@ function media(...values) {
 console.log(media(10, 8, 9, 1, 5))
 
 
-
-
-// ************** Desafio 2
+// ************** Desafio 2**********************
 //Faça uma impressão como neste exemplo: (chunk-chunk-chunk) de acordo o valor que colocarmos como parâmetro na função.
 //Obs: Sem usar for, forEach, while, doWhile...
 
-1° Conclusão
+1° Opção
 
 function print(value) { 
   let i = 0
@@ -37,7 +37,7 @@ function print(value) {
   }
 }
 
-2° Conclusão + aprimorado: curso
+2° Opção
 
 function print(value) { 
   if (value === 0) {
@@ -51,10 +51,11 @@ function print(value) {
   }
 }
 
+// ************** Desafio 3 **********************
+//Inverter arrays, sem usar funções especificas do JS(reverse, forEach), utilizar estrutura de repetição básicas.. 
 
-//Inverter arrays, sem usar funções especificas do JS, utilizar estrutura de repetição básicas..
+1° Opção
 
-1° Conclusão
 function inverter(...array) {
   let newArray = []
 
@@ -64,7 +65,7 @@ function inverter(...array) {
   console.log(newArray)
 }
 
-2° Conclusão : curso
+2° Opção
 function inverter(arr) {
   let newARray = []
 
@@ -78,5 +79,33 @@ function inverter(arr) {
   return newARray
 }
 
-console.log(inverter([5, 8, 7, 3]))
+console.log(inverter([5, 8, 7, 3])) 
+
+// ************** Desafio 4**********************
+
+//Elevar o valor de cada algarismo ao quadrado é retorna-lós concatenados
+
+1° Opção
+function eleven(values) {
+  let newArr = values.toString().split('')
+  let valuesConc = ''
+  for (let i = 0; i < newArr.length; i++) {
+    valuesConc += newArr[i] * newArr[i]
+  }
+  console.log(Number(valuesConc))
+}
+
+
+2° Opção
+function eleven(values) {
+  let newArr = values.toString().split('')
+  let valuesConc = newArr
+    .map(value => {
+      return value ** 2
+    })
+    .join('')
+
+  console.log(Number(valuesConc))
+}
+eleven(3514)
 */
