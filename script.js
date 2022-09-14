@@ -108,9 +108,10 @@ function eleven(values) {
   console.log(Number(valuesConc))
 }
 eleven(3514)
-*/
+
 
 // ************** Desafio 5**********************
+//Insira uma String é retorne o algarismo maior.
 
 function maiorAlgarismo(value) {
   let arr = value.toLowerCase().split('').sort()
@@ -118,3 +119,31 @@ function maiorAlgarismo(value) {
   return arr[arr.length - 1]
 }
 console.log(maiorAlgarismo('its over nine thousand'))
+*/
+
+// ************** Desafio 6**********************
+//Insira uma String é retorne cada palavra invertida
+
+function reverseString(str) {
+  let arr = str.split(' ')
+
+  // for (let i = 0; i < arr.length; i++) {
+  //   let reverseArr = arr[i].split('').reverse()
+  //   newArr += reverseArr.join('') + ' '
+  // }
+
+  let newArr = arr.map(text => {
+    return text.split('').reverse().join('')
+  })
+
+  // let newArr = ""
+
+  // arr.forEach(element => {
+  //   newArr += element.split('').reverse().join('')
+  // })
+
+  return newArr.join(' ')
+}
+//Podeiramos isolar o conteúdo do .map, colocando dentro de uma função.
+
+console.log(reverseString('This is an apple'))
