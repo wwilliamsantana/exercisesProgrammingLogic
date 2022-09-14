@@ -109,3 +109,12 @@ function eleven(values) {
 }
 eleven(3514)
 */
+
+// ************** Desafio 5**********************
+
+function maiorAlgarismo(value) {
+  let arr = value.toLowerCase().split('').sort()
+
+  return arr[arr.length - 1]
+}
+console.log(maiorAlgarismo('its over nine thousand'))
