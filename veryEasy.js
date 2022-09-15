@@ -119,7 +119,7 @@ function maiorAlgarismo(value) {
   return arr[arr.length - 1]
 }
 console.log(maiorAlgarismo('its over nine thousand'))
-*/
+
 
 // ************** Desafio 6**********************
 //Insira uma String é retorne cada palavra invertida
@@ -147,3 +147,4 @@ function reverseString(str) {
 //Podeiramos isolar o conteúdo do .map, colocando dentro de uma função.
 
 console.log(reverseString('This is an apple'))
+*/
