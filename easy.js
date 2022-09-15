@@ -32,3 +32,27 @@ console.log(
   ])
 )
 */
+
+//**********DESAFIO 8 *********************
+//Receba uma string com um nome completo. É retorne o ultimo nome em letra maiúsculo + Iniciais
+//Ex: William Silva de Santana -> SANTANA W. S.
+
+function alterationName(name) {
+  let arr = name.toUpperCase().split(' ')
+  // let sobrenomes = arr.splice(0, arr.length - 1)
+  // let newName = `${arr[arr.length - 1]}, `
+
+  // sobrenomes.map(a => {
+  //   newName += a.substr(0, 1) + '. '
+  // })
+
+  let iniciais = ' '
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    iniciais += `${arr[i][0]}. `
+  }
+  console.log(`${arr[arr.length - 1]}, ${iniciais}`)
+  //console.log(newName)
+}
+
+alterationName('Isaac Larrubia Ferreira Pontes')
