@@ -31,7 +31,7 @@ console.log(
     [1, 93, 57, 42, 103]
   ])
 )
-*/
+
 
 //**********DESAFIO 8 *********************
 //Receba uma string com um nome completo. É retorne o ultimo nome em letra maiúsculo + Iniciais
@@ -56,3 +56,34 @@ function alterationName(name) {
 }
 
 alterationName('Isaac Larrubia Ferreira Pontes')
+
+
+
+
+//**********DESAFIO 9 ********************
+//Receba uma string é verifique se ela possui a mesma quantidade de cada letra que a compõe é retorne True ou False.
+//Ex. "ssd" -> false
+//     "ssdd" -> true
+
+function check(string) {
+  let object = {}
+
+  for (let i = 0; i < string.length; i++) {
+    object[string[i]] = object[string[i]] ? object[string[i]] + 1 : 1
+  }
+  /// object[s] = s (false) ? s + 1 ? 1     /  s = 1
+  //  object[s] = s (true) ? s + 1 ? 1      / s = 2
+  //  object[d] = d (false) ? d + 1 ? 1     / d = 1
+  console.log(Object.values(object))
+  return Object.values(object).every(compare)
+}
+
+//                2       0     [2,2
+function compare(value, index, arr) {
+  return index !== 0 ? value === arr[index - 1] : true
+  //       0  !== 0 (false) /  true
+  //       1  !== 0 (true)  1 === 2 - true
+}
+
+console.log(check('ssdd'))
+*/
