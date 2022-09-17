@@ -86,4 +86,19 @@ function compare(value, index, arr) {
 }
 
 console.log(check('ssdd'))
+
+
+//Escreve aum função que recebea um número e retorne seu valor fatorial, no entando que seja capaz de retornar o fatorial de 9n
+
+function fatorial(num) {
+  let value = BigInt(num)
+
+  if (value == 1n || value == 0n) {
+    return 1n
+  }
+
+  return value * fatorial(value - 1n)
+}
+
+console.log(fatorial(9n))
 */
