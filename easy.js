@@ -87,7 +87,7 @@ function compare(value, index, arr) {
 
 console.log(check('ssdd'))
 
-
+//**********DESAFIO 10 ********************
 //Escreve aum função que recebea um número e retorne seu valor fatorial, no entando que seja capaz de retornar o fatorial de 9n
 
 function fatorial(num) {
@@ -102,3 +102,15 @@ function fatorial(num) {
 
 console.log(fatorial(9n))
 */
+
+//**********DESAFIO 11 ********************
+
+function intervalValues(value) {
+  for (let i = 0; i <= value[0]; i++) {
+    for (let j = 0; j <= value[1]; j++) {
+      console.log([i, j])
+    }
+  }
+}
+
+intervalValues([7, 6])
